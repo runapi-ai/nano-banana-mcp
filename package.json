@@ -1,7 +1,7 @@
 {
   "name": "@runapi.ai/nano-banana-mcp",
-  "version": "0.1.1",
-  "description": "Nano Banana MCP server for RunAPI — create Nano Banana AI tasks (edit image, text to image), poll status, and check pricing across 4 models with one API key.",
+  "version": "0.1.2",
+  "description": "RunAPI Nano Banana MCP server for image generation: create tasks, poll results, and check pricing across 4 model variants from Claude Code, Codex, Cursor, and VS Code.",
   "type": "module",
   "main": "dist/src/index.js",
   "bin": {
@@ -25,12 +25,16 @@
   },
   "keywords": [
     "runapi",
+    "runapi-ai",
     "mcp",
+    "mcp-server",
     "model-context-protocol",
-    "ai",
+    "ai-agents",
+    "claude-code",
+    "cursor",
+    "vscode",
     "nano-banana",
     "nano-banana-mcp",
-    "nano-banana-ai",
     "nano-banana-api",
     "image-generation",
     "ai-image",
@@ -39,7 +43,7 @@
   ],
   "author": "RunAPI",
   "license": "Apache-2.0",
-  "homepage": "https://runapi.ai",
+  "homepage": "https://runapi.ai/models/nano-banana",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/runapi-ai/nano-banana-mcp.git"
