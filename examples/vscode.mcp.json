@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "nano-banana": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@runapi.ai/nano-banana-mcp"
+      ],
+      "env": {
+        "RUNAPI_API_KEY": "${RUNAPI_API_KEY}"
+      }
+    }
+  }
+}

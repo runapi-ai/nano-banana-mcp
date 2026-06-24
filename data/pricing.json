@@ -1,0 +1,32 @@
+{
+  "endpoints": {
+    "nano-banana-edit/edit_image": {
+      "unit_price_cents": 4
+    },
+    "nano-banana/text_to_image": {
+      "unit_price_cents": 4
+    },
+    "nano-banana-2/text_to_image": {
+      "unit_price_cents": 8,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "1k": 8,
+          "2k": 12,
+          "4k": 18
+        }
+      }
+    },
+    "nano-banana-pro/text_to_image": {
+      "unit_price_cents": 18,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "1k": 18,
+          "2k": 18,
+          "4k": 24
+        }
+      }
+    }
+  }
+}
