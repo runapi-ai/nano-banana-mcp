@@ -3,6 +3,7 @@
     "nano-banana-edit",
     "nano-banana",
     "nano-banana-2",
+    "nano-banana-2-lite",
     "nano-banana-pro"
   ],
   "actions": {
@@ -14,7 +15,24 @@
       ],
       "fields_by_model": {
         "nano-banana-edit": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "jpeg"
+            ]
+          },
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "1:1",
               "9:16",
@@ -29,11 +47,9 @@
               "auto"
             ]
           },
-          "output_format": {
-            "enum": [
-              "png",
-              "jpeg"
-            ]
+          "source_image_urls": {
+            "type": "array",
+            "required": true
           }
         }
       }
@@ -44,11 +60,41 @@
       "models": [
         "nano-banana",
         "nano-banana-2",
+        "nano-banana-2-lite",
         "nano-banana-pro"
+      ],
+      "rules": [
+        {
+          "when": {
+            "model": "nano-banana-2-lite"
+          },
+          "forbidden": [
+            "output_resolution",
+            "output_format"
+          ]
+        }
       ],
       "fields_by_model": {
         "nano-banana": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "jpeg",
+              "jpg"
+            ]
+          },
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "1:1",
               "9:16",
@@ -63,16 +109,33 @@
               "auto"
             ]
           },
+          "output_resolution": {
+            "type": "string"
+          },
+          "reference_image_urls": {
+            "type": "array"
+          }
+        },
+        "nano-banana-2": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
           "output_format": {
+            "type": "string",
             "enum": [
               "png",
               "jpeg",
               "jpg"
             ]
-          }
-        },
-        "nano-banana-2": {
+          },
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "1:1",
               "1:4",
@@ -91,23 +154,84 @@
               "auto"
             ]
           },
+          "output_resolution": {
+            "type": "string",
+            "enum": [
+              "1k",
+              "2k",
+              "4k"
+            ]
+          },
+          "reference_image_urls": {
+            "type": "array"
+          }
+        },
+        "nano-banana-2-lite": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string",
+            "max": 20000,
+            "min": 1,
+            "length": true,
+            "required": true
+          },
+          "callback_url": {
+            "type": "string"
+          },
           "output_format": {
+            "type": "string"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "1:4",
+              "1:8",
+              "2:3",
+              "3:2",
+              "3:4",
+              "4:1",
+              "4:3",
+              "4:5",
+              "5:4",
+              "8:1",
+              "9:16",
+              "16:9",
+              "21:9",
+              "auto"
+            ],
+            "default": "auto",
+            "required": true
+          },
+          "output_resolution": {
+            "type": "string"
+          },
+          "reference_image_urls": {
+            "type": "array"
+          }
+        },
+        "nano-banana-pro": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "output_format": {
+            "type": "string",
             "enum": [
               "png",
               "jpeg",
               "jpg"
             ]
           },
-          "output_resolution": {
-            "enum": [
-              "1k",
-              "2k",
-              "4k"
-            ]
-          }
-        },
-        "nano-banana-pro": {
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "1:1",
               "2:3",
@@ -122,19 +246,16 @@
               "auto"
             ]
           },
-          "output_format": {
-            "enum": [
-              "png",
-              "jpeg",
-              "jpg"
-            ]
-          },
           "output_resolution": {
+            "type": "string",
             "enum": [
               "1k",
               "2k",
               "4k"
             ]
+          },
+          "reference_image_urls": {
+            "type": "array"
           }
         }
       }

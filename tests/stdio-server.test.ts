@@ -56,7 +56,7 @@ describe("nano-banana stdio MCP server", () => {
 
     // Every advertised model must price without naming an endpoint, even one
     // that only lives on a non-primary endpoint of a multi-endpoint line.
-    for (const model of ["nano-banana-edit","nano-banana","nano-banana-2","nano-banana-pro"]) {
+    for (const model of ["nano-banana-edit","nano-banana","nano-banana-2","nano-banana-2-lite","nano-banana-pro"]) {
       const priced = await client.callTool({ name: "check_pricing", arguments: { model } });
       const pricedContent = priced.content?.[0];
       if (!pricedContent || pricedContent.type !== "text") {
