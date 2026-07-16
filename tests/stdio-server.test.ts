@@ -56,7 +56,7 @@ describe("nano-banana stdio MCP server", () => {
 
     // Every advertised model must price without naming an endpoint, even one
     // that only lives on a non-primary endpoint of a multi-endpoint line.
-    for (const model of ["nano-banana-edit","nano-banana","nano-banana-2","nano-banana-2-lite","nano-banana-pro"]) {
+    for (const model of ["nano-banana-2-lite","nano-banana-edit","nano-banana","nano-banana-2","nano-banana-pro"]) {
       const priced = await client.callTool({ name: "check_pricing", arguments: { model } });
       const pricedContent = priced.content?.[0];
       if (!pricedContent || pricedContent.type !== "text") {
@@ -67,7 +67,7 @@ describe("nano-banana stdio MCP server", () => {
 
     // A model offered on several endpoints must report every endpoint's price
     // without naming one, not silently price only the first endpoint found.
-    const multiEndpointModels: Record<string, string[]> = {};
+    const multiEndpointModels: Record<string, string[]> = {"nano-banana-2-lite":["edit_image","text_to_image"]};
     for (const [model, actions] of Object.entries(multiEndpointModels)) {
       const spread = await client.callTool({ name: "check_pricing", arguments: { model } });
       const spreadContent = spread.content?.[0];

@@ -1,9 +1,9 @@
 {
   "catalog_models": [
+    "nano-banana-2-lite",
     "nano-banana-edit",
     "nano-banana",
     "nano-banana-2",
-    "nano-banana-2-lite",
     "nano-banana-pro"
   ],
   "actions": {
@@ -11,9 +11,64 @@
       "model": "Nano Banana",
       "endpoint": "edit_image",
       "models": [
+        "nano-banana-2-lite",
         "nano-banana-edit"
       ],
+      "rules": [
+        {
+          "when": {
+            "model": "nano-banana-2-lite"
+          },
+          "forbidden": [
+            "output_format"
+          ]
+        }
+      ],
       "fields_by_model": {
+        "nano-banana-2-lite": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string",
+            "max": 20000,
+            "min": 1,
+            "length": true,
+            "required": true
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "output_format": {
+            "type": "string"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "1:4",
+              "1:8",
+              "2:3",
+              "3:2",
+              "3:4",
+              "4:1",
+              "4:3",
+              "4:5",
+              "5:4",
+              "8:1",
+              "9:16",
+              "16:9",
+              "21:9",
+              "auto"
+            ],
+            "default": "auto",
+            "required": true
+          },
+          "source_image_urls": {
+            "type": "array",
+            "required": true
+          }
+        },
         "nano-banana-edit": {
           "model": {
             "type": "string"

@@ -87,7 +87,7 @@ Nano Banana covers 5 model variants across 2 endpoints. Each tool accepts the mo
 
 | Tool | Models |
 |---|---|
-| `edit_image` | `nano-banana-edit` |
+| `edit_image` | `nano-banana-2-lite`, `nano-banana-edit` |
 | `text_to_image` | `nano-banana`, `nano-banana-2`, `nano-banana-2-lite`, `nano-banana-pro` |
 
 Model availability can change between releases. Use `check_pricing` or the [Nano Banana model page](https://runapi.ai/models/nano-banana) for the current catalog view.

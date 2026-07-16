@@ -1,5 +1,11 @@
 {
   "endpoints": {
+    "nano-banana-2-lite/edit_image": {
+      "unit_price_cents": 3
+    },
+    "nano-banana-2-lite/text_to_image": {
+      "unit_price_cents": 3
+    },
     "nano-banana-edit/edit_image": {
       "unit_price_cents": 4
     },
