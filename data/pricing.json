@@ -23,9 +23,6 @@
         }
       }
     },
-    "nano-banana-2-lite/text_to_image": {
-      "unit_price_cents": 3
-    },
     "nano-banana-pro/text_to_image": {
       "unit_price_cents": 18,
       "billing_config": {

@@ -10,6 +10,7 @@
     "nano-banana/edit-image": {
       "model": "Nano Banana",
       "endpoint": "edit_image",
+      "task_type": "asynchronous",
       "models": [
         "nano-banana-2-lite",
         "nano-banana-edit"
@@ -39,9 +40,6 @@
           "callback_url": {
             "type": "string"
           },
-          "output_format": {
-            "type": "string"
-          },
           "aspect_ratio": {
             "type": "string",
             "enum": [
@@ -66,7 +64,9 @@
           },
           "source_image_urls": {
             "type": "array",
-            "required": true
+            "required": true,
+            "max_items": 10,
+            "min_items": 1
           }
         },
         "nano-banana-edit": {
@@ -112,6 +112,7 @@
     "nano-banana/text-to-image": {
       "model": "Nano Banana",
       "endpoint": "text_to_image",
+      "task_type": "asynchronous",
       "models": [
         "nano-banana",
         "nano-banana-2",
@@ -235,9 +236,6 @@
           "callback_url": {
             "type": "string"
           },
-          "output_format": {
-            "type": "string"
-          },
           "aspect_ratio": {
             "type": "string",
             "enum": [
@@ -260,11 +258,9 @@
             "default": "auto",
             "required": true
           },
-          "output_resolution": {
-            "type": "string"
-          },
           "reference_image_urls": {
-            "type": "array"
+            "type": "array",
+            "max_items": 10
           }
         },
         "nano-banana-pro": {

@@ -1,7 +1,7 @@
 <h1 align="center">RunAPI Nano Banana MCP Server</h1>
 
 <p align="center">
-  <strong>Nano Banana API access for AI agents: create image generation tasks, poll results, and check pricing through one focused MCP server.</strong>
+  <strong>Nano Banana API access for AI agents: run image generation operations, poll asynchronous results, and check pricing through one focused MCP server.</strong>
 </p>
 
 <p align="center">

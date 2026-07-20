@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.1.9](https://github.com/runapi-ai/nano-banana-mcp/releases/tag/v0.1.9) - 2026-07-20
+
+### Fixed
+- Validate generated source and reference image collection limits for each model.
+
+
 ## [v0.1.8](https://github.com/runapi-ai/nano-banana-mcp/releases/tag/v0.1.8) - 2026-07-16
 
 ### Changed
