@@ -306,7 +306,8 @@
             ]
           },
           "reference_image_urls": {
-            "type": "array"
+            "type": "array",
+            "max_items": 8
           }
         }
       }

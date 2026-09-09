@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.1.12](https://github.com/runapi-ai/nano-banana-mcp/releases/tag/v0.1.12) - 2026-09-09
+
+### Changed
+- Validate Nano Banana Pro requests with no more than eight reference images.
+
+
 ## [v0.1.11](https://github.com/runapi-ai/nano-banana-mcp/releases/tag/v0.1.11) - 2026-07-31
 
 ### Changed
