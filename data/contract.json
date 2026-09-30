@@ -15,16 +15,6 @@
         "nano-banana-2-lite",
         "nano-banana-edit"
       ],
-      "rules": [
-        {
-          "when": {
-            "model": "nano-banana-2-lite"
-          },
-          "forbidden": [
-            "output_format"
-          ]
-        }
-      ],
       "fields_by_model": {
         "nano-banana-2-lite": {
           "model": {
@@ -119,17 +109,6 @@
         "nano-banana-2-lite",
         "nano-banana-pro"
       ],
-      "rules": [
-        {
-          "when": {
-            "model": "nano-banana-2-lite"
-          },
-          "forbidden": [
-            "output_resolution",
-            "output_format"
-          ]
-        }
-      ],
       "fields_by_model": {
         "nano-banana": {
           "model": {
@@ -216,7 +195,8 @@
               "1k",
               "2k",
               "4k"
-            ]
+            ],
+            "default": "1k"
           },
           "reference_image_urls": {
             "type": "array"
@@ -303,7 +283,8 @@
               "1k",
               "2k",
               "4k"
-            ]
+            ],
+            "default": "1k"
           },
           "reference_image_urls": {
             "type": "array",
